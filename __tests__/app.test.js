@@ -22,7 +22,7 @@ describe('app routes', () => {
           password: '1234'
         });
       
-      token = signInData.body.token;
+      // token = signInData.body.token;
   
       return done();
     });
@@ -31,34 +31,52 @@ describe('app routes', () => {
       return client.end(done);
     });
 
-  test('returns pinball_machines', async() => {
+    test('returns pinball_machines', async() => {
 
-    const expectation = [
-      {
-        'id': 1,
-        'name': 'bessie',
-        'coolfactor': 3,
-        'owner_id': 1
-      },
-      {
-        'id': 2,
-        'name': 'jumpy',
-        'coolfactor': 4,
-        'owner_id': 1
-      },
-      {
-        'id': 3,
-        'name': 'spot',
-        'coolfactor': 10,
-        'owner_id': 1
-      }
-    ];
+      const expectation = [
+        {
+          'id': 1,
+          'name': 'Skateball',
+          'year_manufactured': 1974,
+          'multiball': false,
+          'owner_id': 1
+        },
+        {
+          'id': 2,          
+          'name': 'Firepower',          
+          'year_manufactured': 1980,
+          'multiball': true,
+          'owner_id': 1       
+        },
+        {
+          'id': 3,
+          'name': 'The Addams Family',
+          'year_manufactured': 1994,
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 4,
+          'name': 'World Cup Soccer "94"',
+          'year_manufactured': 1994,
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 5,
+          'name': 'Fish Tales',
+          'year_manufactured': 1992,
+          'multiball': true,
+          'owner_id': 1
+        },
+      ];
 
-    const data = await fakeRequest(app)
-      .get('/pinball_machines')
-      .expect('Content-Type', /json/)
-      .expect(200);
+      const data = await fakeRequest(app)
+        .get('/pinball_machines')
+        .expect('Content-Type', /json/)
+        .expect(200);
 
-    expect(data.body).toEqual(expectation);
+      expect(data.body).toEqual(expectation);
+    });
   });
 });

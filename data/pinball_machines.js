@@ -15,7 +15,7 @@ module.exports = [
     multiball: true,
   },
   {
-    name: 'World Cup Soccer "94"',
+    name: 'World Cup Soccer 94',
     year_manufactured: 1994,
     multiball: true,
   },
