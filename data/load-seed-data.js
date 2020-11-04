@@ -27,10 +27,10 @@ async function run() {
     await Promise.all(
       pinball_machines.map(pinball => {
         return client.query(`
-                    INSERT INTO pinball_machines (name, year_manufactured, multiball, owner_id)
-                    VALUES ($1, $2, $3, $4);
+                    INSERT INTO pinball_machines (name, year_manufactured, manufacturer, multiball, owner_id)
+                    VALUES ($1, $2, $3, $4, $5);
                 `,
-        [pinball.name, pinball.year_manufactured, pinball.multiball, user.id]);
+        [pinball.name, pinball.year_manufactured, pinball.manufacturer, pinball.multiball, user.id]);
       })
     );
     

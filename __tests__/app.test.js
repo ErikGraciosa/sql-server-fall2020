@@ -38,6 +38,7 @@ describe('app routes', () => {
           'id': 1,
           'name': 'Skateball',
           'year_manufactured': 1974,
+          'manufacturer': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -45,6 +46,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -52,6 +54,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -59,6 +62,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
+          'manufacturer': 'Willams',
           'multiball': true,
           'owner_id': 1
         },
@@ -66,9 +70,18 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
+        {
+          'id': 6,
+          'name': 'Iron Maiden',
+          'year_manufactured': 2017,
+          'manufacturer': 'Stern',
+          'multiball': true,
+          'owner_id': 1
+        }
       ];
 
       const data = await fakeRequest(app)
@@ -87,6 +100,7 @@ describe('app routes', () => {
           'id': 1,
           'name': 'Skateball',
           'year_manufactured': 1974,
+          'manufacturer': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -94,6 +108,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -101,6 +116,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -108,6 +124,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
+          'manufacturer': 'Willams',
           'multiball': true,
           'owner_id': 1
         },
@@ -115,13 +132,23 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
         {
           'id': 6,
+          'name': 'Iron Maiden',
+          'year_manufactured': 2017,
+          'manufacturer': 'Stern',
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 7,
           'name': 'Paragon',
           'year_manufactured': 1976,
+          'manufacturer': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -132,6 +159,7 @@ describe('app routes', () => {
         .send({
           'name': 'Paragon',
           'year_manufactured': 1976,
+          'manufacturer': 'Bally',
           'multiball': false,
           'owner_id': 1
         })
@@ -153,6 +181,7 @@ describe('app routes', () => {
           'id': 1,
           'name': 'Skateball',
           'year_manufactured': 1974,
+          'manufacturer': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -160,6 +189,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -167,6 +197,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -174,6 +205,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
+          'manufacturer': 'Willams',
           'multiball': true,
           'owner_id': 1
         },
@@ -181,23 +213,34 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
         {
           'id': 6,
+          'name': 'Iron Maiden',
+          'year_manufactured': 2017,
+          'manufacturer': 'Stern',
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 7,
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
+          'manufacturer': 'Bally',
           'multiball': true,
           'owner_id': 1
         },
       ];
 
       await fakeRequest(app)
-        .put('/pinball_machines/6')
+        .put('/pinball_machines/7')
         .send({
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
+          'manufacturer': 'Bally',
           'multiball': true,
           'owner_id': 1
         })
@@ -220,6 +263,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -227,6 +271,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -234,6 +279,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
+          'manufacturer': 'Willams',
           'multiball': true,
           'owner_id': 1
         },
@@ -241,13 +287,23 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
         {
           'id': 6,
+          'name': 'Iron Maiden',
+          'year_manufactured': 2017,
+          'manufacturer': 'Stern',
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 7,
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
+          'manufacturer': 'Bally',
           'multiball': true,
           'owner_id': 1
         }
