@@ -212,5 +212,58 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
+
+    test('returns pinball_machines after /DELETE to remove a pinball machine', async() => {
+
+      const expectation = [
+        {
+          'id': 2,          
+          'name': 'Firepower',          
+          'year_manufactured': 1980,
+          'multiball': true,
+          'owner_id': 1       
+        },
+        {
+          'id': 3,
+          'name': 'The Addams Family',
+          'year_manufactured': 1994,
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 4,
+          'name': 'World Cup Soccer 94',
+          'year_manufactured': 1994,
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 5,
+          'name': 'Fish Tales',
+          'year_manufactured': 1992,
+          'multiball': true,
+          'owner_id': 1
+        },
+        {
+          'id': 6,
+          'name': 'Paragon 2.0',
+          'year_manufactured': 2000,
+          'multiball': true,
+          'owner_id': 1
+        }
+      ];
+
+      await fakeRequest(app)
+        .delete('/pinball_machines/1')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      const data = await fakeRequest(app)
+        .get('/pinball_machines')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
   });
 });
