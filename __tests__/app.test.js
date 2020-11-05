@@ -38,7 +38,7 @@ describe('app routes', () => {
           'id': 1,
           'name': 'Skateball',
           'year_manufactured': 1974,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -46,7 +46,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -54,7 +54,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -62,7 +62,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -70,7 +70,7 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -78,7 +78,7 @@ describe('app routes', () => {
           'id': 6,
           'name': 'Iron Maiden',
           'year_manufactured': 2017,
-          'manufacturer': 'Stern',
+          'manufacturer_id': 'Stern',
           'multiball': true,
           'owner_id': 1
         }
@@ -100,7 +100,7 @@ describe('app routes', () => {
           'id': 1,
           'name': 'Skateball',
           'year_manufactured': 1974,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -108,7 +108,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -116,7 +116,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -124,7 +124,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -132,7 +132,7 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -140,7 +140,7 @@ describe('app routes', () => {
           'id': 6,
           'name': 'Iron Maiden',
           'year_manufactured': 2017,
-          'manufacturer': 'Stern',
+          'manufacturer_id': 'Stern',
           'multiball': true,
           'owner_id': 1
         },
@@ -148,7 +148,7 @@ describe('app routes', () => {
           'id': 7,
           'name': 'Paragon',
           'year_manufactured': 1976,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -159,7 +159,7 @@ describe('app routes', () => {
         .send({
           'name': 'Paragon',
           'year_manufactured': 1976,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': false,
           'owner_id': 1
         })
@@ -181,7 +181,7 @@ describe('app routes', () => {
           'id': 1,
           'name': 'Skateball',
           'year_manufactured': 1974,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': false,
           'owner_id': 1
         },
@@ -189,7 +189,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -197,7 +197,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -205,7 +205,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -213,7 +213,7 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -221,7 +221,7 @@ describe('app routes', () => {
           'id': 6,
           'name': 'Iron Maiden',
           'year_manufactured': 2017,
-          'manufacturer': 'Stern',
+          'manufacturer_id': 'Stern',
           'multiball': true,
           'owner_id': 1
         },
@@ -229,7 +229,7 @@ describe('app routes', () => {
           'id': 7,
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': true,
           'owner_id': 1
         },
@@ -240,7 +240,7 @@ describe('app routes', () => {
         .send({
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': true,
           'owner_id': 1
         })
@@ -263,7 +263,7 @@ describe('app routes', () => {
           'id': 2,          
           'name': 'Firepower',          
           'year_manufactured': 1980,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1       
         },
@@ -271,7 +271,7 @@ describe('app routes', () => {
           'id': 3,
           'name': 'The Addams Family',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -279,7 +279,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -287,7 +287,7 @@ describe('app routes', () => {
           'id': 5,
           'name': 'Fish Tales',
           'year_manufactured': 1992,
-          'manufacturer': 'Williams',
+          'manufacturer_id': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -295,7 +295,7 @@ describe('app routes', () => {
           'id': 6,
           'name': 'Iron Maiden',
           'year_manufactured': 2017,
-          'manufacturer': 'Stern',
+          'manufacturer_id': 'Stern',
           'multiball': true,
           'owner_id': 1
         },
@@ -303,7 +303,7 @@ describe('app routes', () => {
           'id': 7,
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 'Bally',
           'multiball': true,
           'owner_id': 1
         }
