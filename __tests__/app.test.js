@@ -62,7 +62,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Willams',
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -124,7 +124,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Willams',
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -205,7 +205,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Willams',
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },
@@ -279,7 +279,7 @@ describe('app routes', () => {
           'id': 4,
           'name': 'World Cup Soccer 94',
           'year_manufactured': 1994,
-          'manufacturer': 'Willams',
+          'manufacturer': 'Williams',
           'multiball': true,
           'owner_id': 1
         },

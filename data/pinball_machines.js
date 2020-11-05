@@ -20,7 +20,7 @@ module.exports = [
   {
     name: 'World Cup Soccer 94',
     year_manufactured: 1994,
-    manufacturer: 'Willams',
+    manufacturer: 'Williams',
     multiball: true,
   },
   {

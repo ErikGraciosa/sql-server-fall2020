@@ -24,7 +24,7 @@ async function run() {
                     manufacturer VARCHAR(512) NOT NULL,
                     multiball BOOLEAN NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
-            );
+                );
         `);
 
     console.log('create tables complete', getEmoji(), getEmoji(), getEmoji());
