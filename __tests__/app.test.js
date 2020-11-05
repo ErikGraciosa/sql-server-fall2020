@@ -114,6 +114,33 @@ describe('app routes', () => {
     });
 
 
+    test('returns full list of manufacturers using get route /manufacturers', async() => {
+
+      const expectation = [
+        {
+          'id': 1,
+          'manufacturer': 'Bally'
+        },
+        {
+          'id': 2,
+          'manufacturer': 'Stern'
+        },
+        {
+          'id': 3,
+          'manufacturer': 'Williams'
+        }
+      ]
+      ;
+
+      const data = await fakeRequest(app)
+        .get('/manufacturers')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
+
+
     test.skip('returns pinball_machines after post sent to confirm added entry', async() => {
 
       const expectation = [
