@@ -21,6 +21,7 @@ async function run() {
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     year_manufactured INTEGER NOT NULL,
+                    manufacturer VARCHAR(512) NOT NULL,
                     multiball BOOLEAN NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
