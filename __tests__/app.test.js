@@ -141,7 +141,7 @@ describe('app routes', () => {
     });
 
 
-    test.skip('returns pinball_machines after post sent to confirm added entry', async() => {
+    test('returns pinball_machines after post sent to confirm added entry', async() => {
 
       const expectation = [
         {
@@ -207,7 +207,7 @@ describe('app routes', () => {
         .send({
           'name': 'Paragon',
           'year_manufactured': 1976,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 1,
           'multiball': false,
           'owner_id': 1
         })
@@ -226,7 +226,7 @@ describe('app routes', () => {
 
 
 
-    test.skip('returns pinball_machines after put sent to confirm update ', async() => {
+    test('returns pinball_machines after put sent to confirm update ', async() => {
 
       const expectation = [
         {
@@ -292,7 +292,7 @@ describe('app routes', () => {
         .send({
           'name': 'Paragon 2.0',
           'year_manufactured': 2000,
-          'manufacturer': 'Bally',
+          'manufacturer_id': 1,
           'multiball': true,
           'owner_id': 1
         })
@@ -308,7 +308,7 @@ describe('app routes', () => {
     });
 
 
-    test.skip('returns pinball_machines after /DELETE to remove a pinball machine', async() => {
+    test('returns pinball_machines after /DELETE to remove a pinball machine', async() => {
 
       const expectation = [
         {
